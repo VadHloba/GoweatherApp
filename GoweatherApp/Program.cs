@@ -20,7 +20,7 @@ namespace GoweatherApp
                 response.EnsureSuccessStatusCode();
                 string responseT = await response.Content.ReadAsStringAsync();
 
-                Console.WriteLine(responseT);
+                //Console.WriteLine(responseT);
                 CityInfo ci = JsonConvert.DeserializeObject<CityInfo>(responseT);
                 Console.WriteLine($"Температура в Киеве: {ci.Temperature}");
 
@@ -29,7 +29,7 @@ namespace GoweatherApp
                 response.EnsureSuccessStatusCode();
                 responseT = await response.Content.ReadAsStringAsync();
 
-                Console.WriteLine(responseT);
+                //Console.WriteLine(responseT);
                 ci = JsonConvert.DeserializeObject<CityInfo>(responseT);
                 Console.WriteLine($"Температура в Одессе: {ci.Temperature}");
 
